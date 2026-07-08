@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Austin Garcia — Video Editor &amp;</title>
+  <meta name="description" content="Austin Garcia is a freelance short-form and long-form video editor specializing in motion graphics, AI-powered content, and viral social media edits.">
+
+  <!-- Google Fonts: Sora (display), Inter (body), Space Mono (timecodes/labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- TIMELINE SCRUBBER — signature scroll-progress element  -->
+  <!-- Styled like an NLE (video editor) timeline. The        -->
+  <!-- playhead moves as the visitor scrolls through the page.-->
+  <!-- ===================================================== -->
+  <div class="timeline-scrubber" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="timeline-track">
+      <div class="timeline-fill" id="timelineFill"></div>
+      <div class="timeline-playhead" id="timelinePlayhead">
+        <span class="playhead-time" id="playheadTime">00:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- NAV -->
+  <!-- ===================================================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="#hero" class="logo">Austin's <span class="logo-dot">Portfolio</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="hero">
+
+    <!-- ===================================================== -->
+    <!-- HERO -->
+    <!-- ===================================================== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-grain"></div>
+        <div class="hero-vignette"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow"><span class="rec-dot" aria-hidden="true"></span>AVAILABLE FOR PROJECTS</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Austin</span>
+          <span class="hero-title-line hero-title-accent">Garcia</span>
+        </h1>
+        <p class="hero-role">Short-Form &amp; Long-Form Video Editor</p>
+        <p class="hero-subtitle">I create engaging short-form and long-form videos, motion graphics, and AI-powered content that help creators and businesses capture attention.</p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="scroll-cue-line"></span>
+        SCROLL
+      </a>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- ABOUT -->
+    <!-- ===================================================== -->
+    <section class="about" id="about">
+      <div class="section-inner fade-in about-inner">
+        <div class="about-photo-wrap">
+          <div class="about-photo">
+            <img src="images/austin.png" alt="Portrait of Austin Garcia" />
+          </div>
+        </div>
+        <div class="about-content">
+          <h2 class="section-heading">Cutting stories that hold attention.</h2>
+          <p class="about-text">I specialize in editing engaging content for creators, brands, and businesses. From fast-paced social media edits to cinematic long-form storytelling, I combine creativity, motion graphics, and modern editing techniques to produce videos that keep audiences watching.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- WHAT I EDIT -->
+    <!-- ===================================================== -->
+    <section class="what-i-edit" id="work">
+      <div class="section-inner">
+        <h2 class="section-heading fade-in">What I Edit</h2>
+
+        <div class="edit-cards">
+          <article class="edit-card glass fade-in">
+            <div class="edit-card-head">
+              <span class="edit-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <h3>User-Generated Content</h3>
+            </div>
+            <ul class="edit-list">
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Short-form Videos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Motion Graphics</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Short Films</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Long-form Videos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Social Media Content</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Promotional Videos</li>
+            </ul>
+          </article>
+
+          <article class="edit-card glass fade-in">
+            <div class="edit-card-head">
+              <span class="edit-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="8.4" stroke="currentColor" stroke-width="1.6"/></svg>
+              </span>
+              <h3>Faceless Content</h3>
+            </div>
+            <ul class="edit-list">
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>AI-generated Short Reels</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Typography Videos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Motion Graphics</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>Viral Faceless Content</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l10 8-10 8V4z" fill="currentColor"/></svg>YouTube Automation Content</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PORTFOLIO -->
+    <!-- ===================================================== -->
+    <section class="portfolio" id="portfolio">
+      <div class="section-inner">
+        <h2 class="section-heading fade-in">Sample Works</h2>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Portfolio items generated by script.js, but included statically for SEO/no-JS fallback -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- SKILLS -->
+    <!-- ===================================================== -->
+    <section class="skills" id="skills">
+      <div class="section-inner">
+        <h2 class="section-heading fade-in">Skills &amp; Software</h2>
+
+        <div class="skills-grid">
+          <div class="skill-bars fade-in">
+            <h3 class="skills-subhead">Editing Software</h3>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <span>Adobe Premiere Pro</span>
+                <span class="skill-level-tag">Intermediate</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <span>Adobe After Effects</span>
+                <span class="skill-level-tag">Intermediate</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <span>CapCut</span>
+                <span class="skill-level-tag">Advanced</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="92"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <span>Alight Motion</span>
+                <span class="skill-level-tag">Advanced</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="92"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-pills fade-in">
+            <h3 class="skills-subhead">Editing Skills</h3>
+            <div class="pill-wrap">
+              <span class="pill">Storytelling</span>
+              <span class="pill">Motion Graphics</span>
+              <span class="pill">Kinetic Typography</span>
+              <span class="pill">AI Video Editing</span>
+              <span class="pill">Smooth Transitions</span>
+              <span class="pill">Sound Design</span>
+              <span class="pill">Color Correction</span>
+              <span class="pill">Subtitle Animation</span>
+              <span class="pill">Social Media Editing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- WHY WORK WITH ME -->
+    <!-- ===================================================== -->
+    <section class="why-me">
+      <div class="section-inner fade-in">
+        <div class="why-card glass">
+          <h2 class="section-heading">Why Work With Me</h2>
+          <p class="why-text">I focus on creating videos that are visually engaging, well-paced, and optimized for today's social media platforms. Whether it's a fast-paced short reel or a polished long-form video, I aim to deliver edits that keep viewers watching and help clients achieve their content goals.</p>
+
+          <div class="feature-grid">
+            <div class="feature-item fade-in">
+              <span class="feature-icon" aria-hidden="true">🎬</span>
+              <h3>Creative Storytelling</h3>
+            </div>
+            <div class="feature-item fade-in">
+              <span class="feature-icon" aria-hidden="true">⚡</span>
+              <h3>Fast Turnaround</h3>
+            </div>
+            <div class="feature-item fade-in">
+              <span class="feature-icon" aria-hidden="true">📈</span>
+              <h3>Content Optimized for Engagement</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- CONTACT -->
+    <!-- ===================================================== -->
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <h2 class="section-heading fade-in">Let's Work Together</h2>
+        <p class="contact-subtitle fade-in">I'm available for freelance projects and collaborations.</p>
+
+        <div class="contact-grid">
+          <div class="contact-card glass fade-in">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 6.5l8 6.5 8-6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Gmail</h3>
+            <p id="emailText">austincanlas.garcia@gmail.com</p>
+            <button class="btn btn-copy" id="copyEmailBtn" type="button" aria-label="Copy email address">
+              <span id="copyBtnText">Copy Email</span>
+            </button>
+          </div>
+
+          <div class="contact-card glass fade-in">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 4.5L2.5 11.7c-.9.35-.88 1.63.03 1.95l4.53 1.6 1.72 5.4c.28.87 1.4 1.1 2 .42l2.53-2.85 4.6 3.4c.77.57 1.87.15 2.06-.79L22.9 5.4c.2-.98-.77-1.78-1.9-1.34v.44z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 15.2l9.7-8.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Telegram</h3>
+            <p><a href="https://t.me/ausx.akg" target="_blank" rel="noopener noreferrer">@ausx.akg</a></p>
+          </div>
+
+          <div class="contact-card glass fade-in">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M15 8.5h-2c-.6 0-1 .5-1 1.1V11h3l-.4 3h-2.6v7h-3v-7H8.5v-3H9V9.3C9 7 10.6 5.3 13 5.3h2v3.2z" fill="currentColor"/></svg>
+            </span>
+            <h3>Facebook</h3>
+            <p><a href="https://www.facebook.com/ausxx.akg" target="_blank" rel="noopener noreferrer">Austin</a></p>
+          </div>
+
+          <div class="contact-card glass fade-in">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.1" cy="6.9" r="1.1" fill="currentColor"/></svg>
+            </span>
+            <h3>Instagram</h3>
+            <p><a href="https://www.instagram.com/ausx.akg" target="_blank" rel="noopener noreferrer">@ausx.akg</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- FOOTER -->
+  <!-- ===================================================== -->
+  <footer class="site-footer">
+    <p>© 2026 Austin Garcia</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Email copied to clipboard</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
