@@ -41,9 +41,9 @@ function buildPortfolioGrid() {
     { title: 'Project 1', category: 'Simple Talking Head Edit', code: '01', videoUrl: '', embedUrl: 'https://youtube.com/embed/QWIBIQ57omo?feature=share' },
     { title: 'Project 2', category: 'Talking Head/Motion Graphics', code: '02', videoUrl: '', embedUrl: 'https://youtube.com/embed/G_WqCu0Q_fk?feature=share' },
     { title: 'Project 3', category: 'Faceless Reel', code: '03', videoUrl: '', embedUrl: 'https://youtube.com/embed/KBhHhqW-cIs?feature=share' },
-    { title: 'Project 4', category: 'Talking Head Edit', code: '04', videoUrl: '', embedUrl: 'https://player.vimeo.com/video/1207148523', fit: 'contain' },
-    { title: 'Project 5', category: 'Uploading Soon', code: '05', videoUrl: '', embedUrl: 'https://player.vimeo.com/video/1245812082' },
-    { title: 'Project 6', category: 'Uploading Soon', code: '06', videoUrl: '', embedUrl: '' },
+    { title: 'Project 4', category: 'Typography', code: '04', videoUrl: '', embedUrl: 'https://player.vimeo.com/video/1207148523', fit: 'contain' },
+    { title: 'Project 5', category: 'Talking Head Edit', code: '05', videoUrl: '', embedUrl: 'https://player.vimeo.com/video/1245812082' },
+    { title: 'Project 6', category: 'Talking Head Edit', code: '06', videoUrl: '', embedUrl: 'https://player.vimeo.com/video/1245822958' },
   ]; 
 
   const featuredProjects = [
